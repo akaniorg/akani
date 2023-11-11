@@ -1,1 +1,4 @@
-fn main() {}
+fn main() {
+    env_logger::init();
+    todo!();
+}

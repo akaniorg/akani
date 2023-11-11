@@ -3,5 +3,25 @@ name = "akani"
 version = "0.1.0"
 authors = ["defiori"]
 edition = "2021"
+license = "MIT"
+repository = "https://github.com/akaniorg/akani"
+
+[features]
+default = ["bin", "s3"]
+bin = ["env_logger"]
+s3 = ["aws-config", "aws-sdk-s3", "tokio"]
 
 [dependencies]
+itertools = "0.12.0"
+log = "0.4"
+thiserror = "1.0"
+anyhow = "1.0"
+aws-config = {version = "0.57.1", optional = true}
+aws-sdk-s3 = {version = "0.35.0", optional = true}
+tokio = { version = "1", features = ["full"] , optional = true}
+env_logger = { version = "0.10", optional = true}
+
+[[bin]]
+name = "akani"
+required-features = ["bin"]
+
