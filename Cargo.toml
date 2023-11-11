@@ -1,0 +1,7 @@
+[package]
+name = "akani"
+version = "0.1.0"
+authors = ["defiori"]
+edition = "2021"
+
+[dependencies]
